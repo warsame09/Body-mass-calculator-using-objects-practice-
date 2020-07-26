@@ -1,0 +1,41 @@
+var mark = {
+    fullName : 'Mark Hamill',
+    mass : 65,
+    height: 1.5,
+    calcBMI: function(){
+        this.bmi = this.mass/(this.height * this.height);
+        return this.bmi //VERY IMPORTANT 
+    }
+
+};
+
+mark.calcBMI();
+
+console.log(mark);
+
+var john ={
+    fullName: 'John Boyega',
+    mass: 63,
+    height: 1.9,
+    calcBMI: function(){
+        this.bmi = this.mass/(this.height * this.height);
+        return this.bmi //VERY IMPORTANT
+    }
+};
+
+john.calcBMI();
+
+console.log(john);
+
+switch (true){
+    case (mark.bmi > john.bmi):
+        console.log(mark.fullName + ' has the higher BMI');
+        break;
+    case (john.bmi> mark.bmi):
+        console.log(john.fullName + ' has the higher BMI');
+        break;
+    case (john.bmi = mark.bmi):
+        console.log('They have the same BMI');
+        break;
+    default: console.log('they\'re both even')
+};
